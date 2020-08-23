@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    <link rel="stylesheet" href="css/funnycanadians.css" />
+
+    <title>NuCamp: A Better Way To Camp</title>
+</head>
+
+<body>
+
+    <header class="jumbotron jumbotron-fluid jumbotron-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-3 col-md-2 align-self-center">
+                    <a href="funnycanadiansindex.html"><img src="img/canada_logo.jpg" class="img-fluid" /></a>
+                </div>
+                <div class="col">
+                    <h1>Canada's Top Comedians</h1>
+                    <h2>Where it is too cold to not have a sense of humor!</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-sm navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="funnycanadiansindex.html"><img src="img/canada_logo.jpg" height="30" width="60" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#canadaComedyNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="canadaComedyNavbar">
+                <ul class="navbar-nav">
+                    <li class="navbar-item active"><a class="nav-link" href="#">Home</a></li>
+                    <li class="navbar-item"><a class="nav-link" href="jim_carrey.html">Jim Carrey</a></li>
+                    <li class="navbar-item"><a class="nav-link" href="mike_myers.html">Mike Myers</a></li>
+                    <li class="navbar-item"><a class="nav-link" href="#">Norm Macdonald</a></li>
+                    <li class="navbar-item"><a class="nav-link" href="#">John Candy</a></li>
+                    <li class="navbar-item"><a class="nav-link" href="#">Eugene Levy</a></li>
+                    <li class="navbar-item"><a class="nav-link" href="tell_us_your_favorite.html">Tell Us Your Favorite!</a></li>
+                </ul>
+                <span class="navbar-text ml-auto">
+                    <a role="button" data-toggle="modal" data-target="#pollModal">
+                        <i class="fa fa-bar-chart"></i>Poll
+                    </a>
+                </span>
+            </div>
+        </div>    
+    </nav>
+
+    <div id="pollModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Vote!</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body">
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" id="jimCarrey" name="voteRadio" value="jimCarrey" />
+                            <label for="jimCarrey" class="form-check-label">Jim Carrey</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" id="mikeMyers" name="voteRadio" value="mikeMyers" />
+                            <label for="mikeMyers" class="form-check-label">Mike Myers</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" id="normMacdonald" name="voteRadio" value="normMacdonald" />
+                            <label for="normMacdonald" class="form-check-label">Norm Macdonald</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" id="johnCandy" name="voteRadio" value="johnCandy" />
+                            <label for="johnCandy" class="form-check-label">John Candy</label>     
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" id="eugeneLevy" name="voteRadio" value="eugeneLevy" />
+                            <label for="eugeneLevy" class="form-check-label">Eugene Levy</label>     
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="funnycanadiansindex.html">Home</a></li>
+                    <li class="breadcrumb-item active">Your Favorite</li>
+                </ol>
+                <h2>Did we miss someone? Tell us your FAVORITE!~</h2>
+                <hr />
+            </div>
+        </div>
+
+        <div class="row row-content">
+            <div class="col-md-10">
+                <form>
+                    <div class="form-group row">
+                        <label for="firstName" class="col-md-2 col-form-label">First Name</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name " />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="lastName" class="col-md-2 col-form-label">Last Name</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="imdbOrWIki" class="col-2 col-form-label">IMDB or Wikipedia</label>
+                            <div class="col-10 col-md-10">
+                                <input type="url" class="form-control" id="imdbOrWIki" name="imdbOrWIki" placeholder="URL for IMDB or Wikipedia" />
+                            </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="headshot" class="col-md-2 col-form-label">Headshot</label>
+                        <div class="col-md-10">
+                            <input type="image" class="form-control" id="headshot" name="headshot" placeholder="Headshot" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col">
+                        Their comedy path:
+                            <div class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="SNL" name="comedyPathCheckbox" value="SNL" />
+                                <label for="SNL" class="form-check-label">SNL</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="standup" name="comedyPathCheckbox" value="standup" />
+                                <label for="standup" class="form-check-label">Standup</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="secondCity" name="comedyPathCheckbox" value="secondCity" />
+                                <label for="secondCity" class="form-check-label">Second City</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="inLivingColor" name="comedyPathCheckbox" value="inLivingColor" />
+                                <label for="inLivingColor" class="form-check-label">In Living Color</label>                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="feedback" class="col-md-2 col-form-label">Their best joke</label>
+                        <div class="col-md-10">
+                            <textarea class="form-control" id="feedback" name="feedback" rows="8"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="offset-md-2 col-med-10">
+                            <button type="submit" class="btn btn-primary">Send Feedback</button>
+                        </div>
+                    </div>
+                </form>                
+            </div>
+       </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-2 offset-1">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="#">Sites</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-5 text-center">
+                    <h5>Social</h5>
+                    <a href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+                    <a href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+                    <a href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    <a href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <i class="fa fa-phone fa-lg text-primary"></i> 1-206-555-1234<br />
+                    <i class="fa fa-envelope-o fa-lg text-primary"></i> campsites@nucamp.co
+                </div>
+           </div>
+        </div>
+    </footer>
+
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
