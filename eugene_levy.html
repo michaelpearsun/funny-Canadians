@@ -39,7 +39,18 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="canadaComedyNavbar">
-                <ul class="navbar-nav">
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Menu</button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a class="nav-link" href="#">Home</a>
+                      <a class="nav-link" href="jim_carrey.html">Jim Carrey</a>
+                      <a class="nav-link" href="mike_myers.html">Mike Myers</a>
+                      <a class="nav-link" href="norm_macdonald.html">Norm Macdonald</a>
+                      <a class="nav-link" href="john_candy.html">John Candy</a>
+                      <a class="nav-link" href="tell_us_your_favorite.html">Tell us your favorite</a>
+                    </div>
+                  </div>
+                <!-- <ul class="navbar-nav">
                     <li class="navbar-item active"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="navbar-item"><a class="nav-link" href="jim_carrey.html">Jim Carrey</a></li>
                     <li class="navbar-item"><a class="nav-link" href="mike_myers.html">Mike Myers</a></li>
@@ -47,7 +58,7 @@
                     <li class="navbar-item"><a class="nav-link" href="john_candy.html">John Candy</a></li>
                     <li class="navbar-item"><a class="nav-link" href="#">Eugene Levy</a></li>
                     <li class="navbar-item"><a class="nav-link" href="tell_us_your_favorite.html">Tell Us Your Favorite!</a></li>
-                </ul>
+                </ul> -->
                 <span class="navbar-text ml-auto">
                     <a role="button" data-toggle="modal" data-target="#pollModal">
                         <i class="fa fa-bar-chart"></i>Poll
@@ -159,7 +170,27 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
 
 </body>
 
